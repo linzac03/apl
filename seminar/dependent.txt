@@ -1,0 +1,34 @@
+1) What is the Curry-Howard Isomorphism?
+
+Curry–Howard isomorphism is the direct relationship between computer programs and mathematical proofs.
+
+2) What is a dependent type?
+
+A dependent type is a type that depends on other types. An example is
+the type (A^n) of vectors of length n with components of type A. The type (A^n) depends on the number n, or that (A^n) is a family of types indexed by the number n.
+
+3) What is the relationship between sets, types, and propositions?
+
+There is a one-to-one correspondence between propositions and types in a type system with dependent types. There is also a one-to-one correspondence between proofs of a certain proposition and terms of the corresponding type.
+
+4) Do the Beta-Reduction for the definition of plus using natrec.
+
+natrec : {C : Set} -> C -> (Nat -> C -> C) -> Nat -> C
+natrec p h zero = p
+natrec p h (succ n) = h n (natrec p h n)
+
+plus : Nat -> Nat -> Nat
+plus n m = natrec m (\x y -> succ y) n
+
+5) What is a normal form?
+
+Normal form is a form that terminates or cannot be rewritten any further.
+
+6) What is primitive recursion and why is it important?
+
+Primitive recursion is a function that has a base case and a step case. Primitive recursion will continue to carry out the step case until it reaches the base case. It is important, because it ensures that a program will terminate.
+
+7) What is strong normalization and what is its relation to termination and primitive recursion? 
+
+An object is said to be strongly normalizing if it can be rewritten in any way into a normal form, that is, if every rewrite sequence starting from it eventually cannot be extended any further. A strongly normalized object is guaranteed to terminate like primitive recursion is.
+

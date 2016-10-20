@@ -1,0 +1,12 @@
+Q2. The error:
+    Couldn't match expected type `Empty'
+           against inferred type `NonEmpty'
+      Expected type: List a Empty
+      Inferred type: List a NonEmpty
+		
+		This error occurs because List a Empty and List a NonEmpty is ambiguous in a sense. Cons would need to have a Nil somewhere in the list, yet Empty and NonEmpty are two seperate types and cannot exist in the same list in haskell. I see no useful reason to seperate the empty and nonempty types, since this list could also be defined as:
+		
+		data List a b = Nil | Cons b (List a b)
+		
+		Although I am unsure whether this is achieving the same goal, but I believe its similar at least.
+

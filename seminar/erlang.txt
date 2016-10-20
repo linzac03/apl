@@ -1,0 +1,38 @@
+1) Summarize the goals of Erlang
+
+The goals of Erlang are:
+
+1) Handle a very large number of concurrent activities
+2) Perform actions at a certain point in time or within a certain time
+3) Be easily distributable over a several computers (ie Network)
+4) Interact with hardware
+5) Able to be built up into very large software systems
+6) Sustainable operation
+7) Be upgradable & reconfigurable without stopping the system.
+8) Fault tolerance bot to hardware failures and software errors.
+
+2) What does it say about software design.
+
+Software design is a matter of programming. Some systems accept specifications and then generate code. Others use an approach of raising the level of programming by using a language technology at a high abstraction level which provides built-in support required by the application domain.
+
+3) What is interoperability? Why is it important?
+
+Interoperability is the ability of making systems work together. It is important because the ability to exchange data and communicate between multiple systems is crucial in software development.
+
+4) What is a lightweight process and why is it important?
+
+A light-weight process is a means of achieving multitasking. It is important because it can provide some major performance benefits.
+
+5) What is the role of a virtual machine?
+
+The role of a virtual machine is to make the programming language independent of the operating system and ensuring program portability.
+
+6) Why do they justify or need dynamic typing?
+
+Erlang was meant to be a symbolic language.
+
+7) What is the actor model?
+
+The actor model is a mathematical model of concurrent computation that treats "actors" as the universal primitives of concurrent computation: in response to a message that it receives, an actor can make local decisions, create more actors, send more messages, and determine how to respond to the next message received.
+
+

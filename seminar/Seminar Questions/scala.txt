@@ -1,0 +1,147 @@
+1) Define the terms:
+	
+Module - a module is a part of a program. Programs are composed of one or more independently developed modules that are not combined until the program is linked. A module can be said to be a component because a module can be used and imported into many different programs.
+
+Classes - a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions, methods). Classes are components because they are used in larger parts by the program.
+
+Libraries - a collection of non-volatile resources used by computer programs, often to develop software. Libraries can be considered components because they can be used and imported into a large variety of programs.
+
+Frameworks - an abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. It can be considered a component much like libraries can be considered a component.
+
+Processes - an instance of a computer program that is being executed.
+
+2) Define the terms:
+
+Aggregation -  is a kind of association that specifies a whole/part relationship between the aggregate (whole) and component part.
+
+Parameterization -
+
+Inheritace - when an object or class is based on another object or class, using the same implementation (inheriting from a class) specifying implementation to maintain the same behavior (realizing an interface; inheriting behavior).
+
+Remote invocation - a way that a programmer can write object-oriented programming in which objects on different computers can interact in a distributed network.
+
+Message passing - sends a message to a process (which may be an actor or object) and relies on the process and the supporting infrastructure to select and invoke the actual code to run
+
+3) What is component abstraction and composition?
+
+The abstraction of type members, explicit selftypes, and modular mixin compostion to tranform an abritraty assembly of static program parts with hard references between them into a system of reusable components.
+
+4) What distinguishes object-oriented languages from functional languages?
+
+(The way the two languages work with state)
+
+Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which are data structures that contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods. 
+
+Functional programming is a programming paradigm, a style of building the structure and elements of computer programs, that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+
+5) What are abstract type definitions ?
+
+Definitions where a type is given (ie. type T), but the primitive type is not supplied.
+
+6) What are path dependent types ?
+
+Path dependent types are object instances that are dependent on the instance in which they were instantiated.
+
+7) What are modular mixin compositions?
+
+Modules that provide a certain functionality to be inherited or just reused by a subclass, while not meant for instantiation.
+
+8) What is a singleton object and why might it be useful?
+
+An object that you set up in such a way that only one instance is ever created.
+Such an object might be useful if you have an object that you want to remain as a constant. 
+
+9) What distinguishes an expression from a statement?
+
+An expression produces a value and can be written wherever a value is expected.
+A statement performs an action.
+
+10) What is the difference between a static and a dynamic member?
+
+Static members are constants and dynamic members are not.
+
+11) What is the difference between anyRef and anyVal?
+
+anyVal deals with the primitve types of Scal, where anyRef deals with all other classes.
+
+12) What are the two different notions of equality mentioned on p 3?
+
+The two different notions of equality mentioned on p3 refer to using == on values and == on objects. Should == on objects refer to the object being the same object or the object having the same members?
+
+13) What is boxing and unboxing?
+
+Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type. Unboxing extracts the value type from the object.
+
+14) How does the abstract class Nat work? The class Zero? The class Succ ? Go through an example. 
+
+new Succ(Zero) + new Succ(Zero) = Succ(Succ(Zero))
+
+15) How does the list cons operator work?
+
+The list cons operator is right-associative. 
+x :: y :: zs  = x :: (y :: zs)
+
+16) What is the significance of the => operator? Why are the arguments unevaluated?
+
+=> defines the mapping of a function to another type. 
+
+17) rewrite the celsius class in Java with explicit getters/setters 
+
+public class Celsius {
+    private int d = 0;
+    
+    public int degree() {
+        return d;
+    }
+    
+    public int degree_(int x) {
+        if (x >= -273) {
+            d = x;
+        }
+        return d;
+    }
+
+18) How does exists and forall on p 5 work?
+
+exists takes as parameters an array of type T and a function that takes type T and returns the type Boolean. If there is an element in the array that passes the test function then it will return true.
+
+forall takes the same parameters as exists, but it only returns true if all the elements in the array pass the test function.
+
+19) How about the alternate definition of forall on p 6?
+
+sqrts takes a list of doubles and then uses list comprehension in a for loop to apply Math.sqrt to each element of the list. The new list of sqrts is then returned.
+
+20) What is the difference between functional abstraction and abstract members?
+
+functional abstraction uses functions, while abstract members use objects.
+
+21) What is the problem in Section 5 dealing with covariance and GenCell>
+
+22) Can you think of a problem where covariant lists would lead to problems if we could update the lists?
+
+23) Why is the first definition of prepend a problem and the second one ok?
+
+The first definition of prepend is not type-correct, because it is in the contravariant position of the covarient class GenList. The second one is ok, because they give the type T as a lower bound of Type S.
+
+24) See if you can untangle the SubjectObserver example and the use of a selftype
+
+25) What is the difference between generics and abstract types?
+
+Abstract types are initiated in the object.
+
+abstract class Buffer {
+  type T
+  val element: T
+}
+
+generics are passed as a parameter.
+
+abstract class Buffer[T] {
+  val element: T
+}
+
+26) What is a mixin? What does the object Test on p 11 look like?
+
+A mixin allows programmers to reuse the detla of a class defintion, so you can
+combine to classes together.
+

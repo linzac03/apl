@@ -1,0 +1,21 @@
+1) Define the terms:
+
+    modules - Modules may contain classes, a module is a collection of code built up to act as its own standalone application. Without the need of any 'setup'. 
+    classes - A class defines an object which may act in a certain way. Containing some amount of methods to invoke actions and some amount of members to which actions may interact with.
+    libraries - Libraries are collections of 'helper' functions which may aid you in say parsing an XML element or operating with SNMP.
+    frameworks - A framework lays out a design specification for modules, libraries, and also classes to interact and build conglomerate programs. An example of this would be an application driven website.
+    processes - Processes are jobs in which sequential sections of code are executed to perform some service for the user or machine.
+    web services - Web services help aid application functionality and communicate between your application and the internet.
+
+2) What is the difference between anyRef and anyVal? 
+	anyVal inherits from the primitive classes byte, char, int, float, etc
+	anyRef inherits from the reference classes String, List, Seq, etc
+
+3) What distinguishes object-oriented languages from functional languages?
+	For the most part object-oriented languages are familiar with the ideas of inheritance, encapsulation, and polymorphism. Functional languages represent everything as functions. A function does not necessarily inherit from a parent object. So if you wanted some series of functions to be interoperable you would need to be strict in defining them. Whereas in object-oriented programming you are able to extend one object to inherit a class and all of its methods without rewriting the function. Functional programming is also able to pass functions as parameters since everything is technically a function. Values could be thought of as parameterless functions in a functional programming language, which is unheard of in an object oriented language (to the best of my knowledge, Scala being the only exception).
+
+4) What is a singleton object and why might it be useful?
+	A singleton object is an object with a single member/method. The easiest example to understand, the same mentioned in the paper, is the instance of Null. Null can not be of the same type or value or anything else that may be of occurrence within the same scope since Null is often used to denote not-a-value or not-a-number, among other 'emptiness' issues.
+
+5) What is a mixin? What doesn the object Test on p 11 look like?
+	A mixin is a generic trait to add to your object. The object Test looks like a class definition in Java, but the class is nested within the object, so the object can be constructed without the need of a class context.  
